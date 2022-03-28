@@ -12,9 +12,25 @@ namespace CRUD_SQLServer
 {
     public partial class DetalleContactos : Form
     {
+        private BusinessLogicLayer businessLogicLayer;
         public DetalleContactos()
         {
             InitializeComponent();
+            businessLogicLayer = new BusinessLogicLayer();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Contacts contact = new Contacts();
+            contact.FirstName = txtFirstName.Text;
+            contact.LastName = txtLastName.Text;
+            contact.Phone = txtPhone.Text;
+            contact.Address = txtAddress.Text;
         }
     }
 }

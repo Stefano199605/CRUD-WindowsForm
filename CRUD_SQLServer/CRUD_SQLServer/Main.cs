@@ -26,7 +26,7 @@ namespace CRUD_SQLServer
 
 
         #region PRIVATE METHODS
-
+          
         private void OpenContactDetailsDialog()
         {
             DetalleContactos contactosdetalles = new DetalleContactos();
