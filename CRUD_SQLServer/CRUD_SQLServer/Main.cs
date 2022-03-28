@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace CRUD_SQLServer
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            DetalleContactos contactosdetalles = new DetalleContactos();
+            contactosdetalles.ShowDialog();
         }
     }
 }
