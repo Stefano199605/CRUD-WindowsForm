@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUD_SQLServer
 {
-   public class Contacts
+   public class contacts
     {
         public int Id { get; set; }
 

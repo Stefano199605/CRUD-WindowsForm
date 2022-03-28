@@ -12,9 +12,11 @@ namespace CRUD_SQLServer
 {
     public partial class Main : Form
     {
+        private BusinessLogicLayer businessLogicLayer;
         public Main()
         {
             InitializeComponent();
+            businessLogicLayer = new BusinessLogicLayer();
         }
 
         #region EVENTS
@@ -33,5 +35,14 @@ namespace CRUD_SQLServer
             contactosdetalles.ShowDialog();
         }
         #endregion
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            PopulateContacts();
+        }
+        private void PopulateContacts()
+        {
+            
+        }
     }
 }

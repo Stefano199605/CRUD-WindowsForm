@@ -26,11 +26,19 @@ namespace CRUD_SQLServer
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Contacts contact = new Contacts();
+
+            SaveContact();
+        }
+
+        private void SaveContact()
+        {
+            contacts contact = new contacts();
             contact.FirstName = txtFirstName.Text;
             contact.LastName = txtLastName.Text;
             contact.Phone = txtPhone.Text;
             contact.Address = txtAddress.Text;
+
+            businessLogicLayer.SaveContact(contact);
         }
     }
 }

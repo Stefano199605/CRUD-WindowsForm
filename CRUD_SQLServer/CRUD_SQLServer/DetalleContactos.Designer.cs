@@ -73,6 +73,7 @@ namespace CRUD_SQLServer
             // 
             // txtFirstName
             // 
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(162, 75);
             this.txtFirstName.Multiline = true;
             this.txtFirstName.Name = "txtFirstName";
@@ -81,6 +82,7 @@ namespace CRUD_SQLServer
             // 
             // txtLastName
             // 
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(162, 137);
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
@@ -89,6 +91,7 @@ namespace CRUD_SQLServer
             // 
             // txtPhone
             // 
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(162, 196);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
@@ -97,6 +100,7 @@ namespace CRUD_SQLServer
             // 
             // txtAddress
             // 
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(162, 255);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";

@@ -13,16 +13,22 @@ namespace CRUD_SQLServer
         {
             dataAccessLayer = new DataAccessLayer();
         }
-        public Contacts SaveContact(Contacts contact)
+        public contacts SaveContact(contacts contact)
         {
             if (contact.Id == 0)
             {
-                //dataAccessLayer.InsertContact();
+                dataAccessLayer.InsertContact(contact);
             }
             else
             {
                 //dataAccessLayer.UpdateContact();
             }
+            return contact;
+        }
+
+        private List<contacts> GetContacts()
+        {
+            dataAccessLayer
         }
     }
 }

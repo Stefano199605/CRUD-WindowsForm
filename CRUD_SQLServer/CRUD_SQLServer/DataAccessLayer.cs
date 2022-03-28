@@ -9,9 +9,9 @@ namespace CRUD_SQLServer
 {
     public class DataAccessLayer
     {
-        private SqlConnection conn = new SqlConnection("Server=DESKTOP-3LUEQ59;DataBase=WinFormsContact;UID=sa;password=p0deroso12");
+        private SqlConnection conn = new SqlConnection("Server=DESKTOP-3LUEQ59;DataBase=WinFormsContacts;UID=sa;password=p0deroso12");
 
-        public void InsertContact(Contacts contact)
+        public void InsertContact(contacts contact)
         {
             try
             {
@@ -27,6 +27,38 @@ namespace CRUD_SQLServer
                 SqlParameter Address = new SqlParameter("@Address", contact.Address);
 
                 SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.Add(firstName);
+                command.Parameters.Add(LastName);
+                command.Parameters.Add(Phone);
+                command.Parameters.Add(Address);
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public List<contacts> GetContacts()
+        {
+            try
+            {
+                conn.Open();
+                string query = @"SELECT id,FirstName,LastName,Phone Address FROM Contacts";
+                SqlCommand command = new SqlCommand(query, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    
+
+                }
             }
             catch (Exception)
             {
@@ -34,6 +66,5 @@ namespace CRUD_SQLServer
                 throw;
             }
         }
-
     }
 }
