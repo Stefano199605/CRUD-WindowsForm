@@ -17,10 +17,21 @@ namespace CRUD_SQLServer
             InitializeComponent();
         }
 
+        #region EVENTS
         private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            OpenContactDetailsDialog();
+        }
+        #endregion
+
+
+        #region PRIVATE METHODS
+
+        private void OpenContactDetailsDialog()
         {
             DetalleContactos contactosdetalles = new DetalleContactos();
             contactosdetalles.ShowDialog();
         }
+        #endregion
     }
 }
